@@ -80,7 +80,7 @@ static/_platforms/
 linkcheck
 
 # next.js
-/.next/
+.next/
 /out/
 public/~partytown
 public/page-data
@@ -95,3 +95,6 @@ public/page-data
 tsconfig.tsbuildinfo
 
 public/mdx-images/*
+
+todo.md
+.turbo

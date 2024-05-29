@@ -1,0 +1,18 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "type-check": {},
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^dev"]
+    },
+    "lint:fix": {},
+    "algolia": {
+      "inputs": [".next/**"]
+    }
+  }
+}
