@@ -28,7 +28,7 @@ jobs:
       - run: yarn build
       # bun seems to be the most straightforward way to run a TypeScript script
       # without introducing another dependency like ts-node or tsx for everyone else
-      - run: bun ./scripts/algolia.ts
+      - run: cd apps/docs && bun ./scripts/algolia.ts
         env:
           ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
