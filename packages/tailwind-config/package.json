@@ -1,0 +1,14 @@
+{
+  "name": "@sentry-docs/tailwind-config",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./tailwind.config.ts"
+  },
+  "devDependencies": {
+    "tailwindcss": "^2.0.2",
+    "tailwindcss-scoped-preflight": "^3.0.4",
+    "typescript-config": "*"
+  }
+}
