@@ -89,6 +89,7 @@
   },
   "devDependencies": {
     "@sentry-docs/tailwind-config": "*",
+    "@sentry-docs/typescript-config": "*",
     "@babel/preset-typescript": "^7.15.0",
     "@codecov/webpack-plugin": "^0.0.1-beta.2",
     "@spotlightjs/spotlight": "^2.0.0-alpha.1",
