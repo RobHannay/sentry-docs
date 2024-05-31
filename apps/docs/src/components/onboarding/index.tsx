@@ -176,8 +176,6 @@ export function OnboardingOptionButtons({
         `[data-onboarding-option="${option.id}"]`
       );
       targetElements.forEach(el => {
-        console.log('el', el.dataset);
-
         const hiddenForThisOption = el.dataset.hideForThisOption === 'true';
         if (hiddenForThisOption) {
           el.classList.toggle('hidden', option.checked);
@@ -211,7 +209,7 @@ export function OnboardingOptionButtons({
         });
       }
     });
-  }, [options, touchOptions]);
+  }, [options, touchedOptions]);
 
   const buttonsRef = useRef<HTMLDivElement>(null);
   const containerTopPx = 80;

@@ -121,23 +121,25 @@ async function apiCategoriesUncached(): Promise<APICategory[]> {
   Object.entries(data.paths).forEach(([apiPath, methods]) => {
     Object.entries(methods).forEach(([method, apiData]) => {
       apiData.tags.forEach(tag => {
-        categoryMap[tag].apis.push({
+        categoryMap[tag]?.apis.push({
           apiPath,
           method,
           name: apiData.operationId,
           slug: slugify(apiData.operationId),
           summary: apiData.summary,
           descriptionMarkdown: apiData.description,
+          // @ts-ignore
           pathParameters: apiData.parameters.filter(
             p => p.in === 'path'
           ) as APIParameter[],
+          // @ts-ignore
           queryParameters: apiData.parameters.filter(
             p => p.in === 'query'
           ) as APIParameter[],
           requestBodyContent: {
             example:
               apiData.requestBody?.content &&
-              Object.values(apiData.requestBody.content)[0].example,
+              Object.values(apiData.requestBody.content)[0]?.example,
           },
           bodyContentType: getBodyContentType(apiData),
           bodyParameters: getBodyParameters(apiData),
