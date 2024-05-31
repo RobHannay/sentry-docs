@@ -1,14 +1,7 @@
 /* eslint-env node */
 /* eslint import/no-nodejs-modules:0 */
 
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ['sentry-docs', 'plugin:@next/next/recommended'],
-  globals: {
-    jest: true,
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  rules: {
-    'import/no-nodejs-modules': 'off',
-  },
+  extends: ['@sentry-docs/eslint-config/next.js'],
 };

@@ -1,0 +1,14 @@
+{
+  "name": "@sentry-docs/eslint-config",
+  "private": true,
+  "version": "0.0.0",
+  "files": [
+    "next.js"
+  ],
+  "devDependencies": {
+    "typescript-config": "*",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.1",
+    "eslint-config-sentry-docs": "^1.118.0"
+  }
+}
